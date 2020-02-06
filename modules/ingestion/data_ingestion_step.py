@@ -21,7 +21,10 @@ def data_ingestion_step(datastore, compute_target):
     '''
 
     run_config = RunConfiguration()
-    run_config.environment.environment_variables = {'COGNITIVE_SERVICES_API_KEY': os.environ['COGNITIVE_SERVICES_API_KEY']}
+    run_config.environment.environment_variables = {
+        'COGNITIVE_SERVICES_API_KEY': os.environ['COGNITIVE_SERVICES_API_KEY'],
+        'AZURE_REGION': os.getenv('AZURE_REGION', 'eastus')
+        }
     run_config.environment.docker.enabled = True
 
     num_images = PipelineParameter(name='num_images', default_value=25)

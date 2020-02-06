@@ -39,7 +39,8 @@ $Keys = az cognitiveservices account keys list `
     -g $ResourceGroup | ConvertFrom-Json
 
 
-Write-Host 'Setting environment variable...'
+Write-Host 'Setting environment variables...'
 $env:COGNITIVE_SERVICES_API_KEY = $Keys.key1
+$env:AZURE_REGION = $Parameters.parameters.location.value
 
 python $PSScriptRoot\object-recognition-pipeline.py
