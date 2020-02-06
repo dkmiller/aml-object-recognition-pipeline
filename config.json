@@ -1,5 +1,5 @@
 {
-    "subscription_id": "<SUBSCRIPTION-ID>",
-    "resource_group": "<RESOURCE-GROUP>",
-    "workspace_name": "<WORKSPACE-NAME>"
+    "subscription_id": "48bbc269-ce89-4f6f-9a12-c6f91fcb772d",
+    "resource_group": "danmill-ml-ncus",
+    "workspace_name": "danmill-workspace"
 }
