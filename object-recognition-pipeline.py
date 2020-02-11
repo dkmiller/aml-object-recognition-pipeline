@@ -46,7 +46,7 @@ train_step, train_outputs = train_step(data_preprocess_outputs['train_dir'], dat
 evaluate_step, evaluate_outputs = evaluate_step(train_outputs['model_dir'], data_preprocess_outputs['test_dir'], gpu_compute_target)
 
 # Step 5: Deploy Model
-deploy_step, deploy_outputs = deploy_step(train_outputs['model_dir'], evaluate_outputs['accuracy_file'], data_preprocess_outputs['test_dir'], cpu_compute_target)
+deploy_step, _ = deploy_step(train_outputs['model_dir'], evaluate_outputs['accuracy_file'], data_preprocess_outputs['test_dir'], cpu_compute_target)
 
 # Submit pipeline
 print('Submitting pipeline ...')
